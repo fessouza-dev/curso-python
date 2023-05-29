@@ -1,10 +1,6 @@
-def dar_boas_vindas(nome, sobrenome, nome_do_curso):
-    print("Olá,", nome, sobrenome)
-    print("Bem vindo ao curso de", nome_do_curso)
-    
-dar_boas_vindas("João", "Souza", "JavaScript"); # Argumentos posicionais -> faz diferença a posição em que são passados
-
-def calcular_conta(consumo, taxa_servico, desconto_fidelidade):
+# caso não sejam passados valores para a função, 
+# será utilizado como parametro os valores padrões da mesma
+def calcular_conta(consumo, taxa_servico=0.1, desconto_fidelidade=0):
     if taxa_servico == 0 and desconto_fidelidade == 0:
         return consumo # early return
     servico = consumo * taxa_servico
